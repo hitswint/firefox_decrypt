@@ -557,7 +557,7 @@ def export_pass(to_export, prefix):
 
             LOG.debug("Exporting credentials for '%s'", passname)
 
-            data = u"{0}\n{1}\n".format(passw, user)
+            data = u"{0}\nusername: {1}\n".format(passw, user)
 
             LOG.debug("Inserting pass '%s' '%s'", passname, data)
 
@@ -759,7 +759,7 @@ def parse_sys_args():
                         help="Path to profile folder (default: {0})".format(profile_path))
     parser.add_argument("-e", "--export-pass", action="store_true",
                         help="Export URL, username and password to pass from passwordstore.org")
-    parser.add_argument("-p", "--pass-prefix", action="store", default=u"web",
+    parser.add_argument("-p", "--pass-prefix", action="store", default=u"firefox_decrypt",
                         help="Prefix for export to pass from passwordstore.org (default: %(default)s)")
     parser.add_argument("-f", "--format", action="store", choices={"csv", "human"},
                         default="human", help="Format for the output.")
