@@ -759,7 +759,7 @@ def parse_sys_args():
                         help="Path to profile folder (default: {0})".format(profile_path))
     parser.add_argument("-e", "--export-pass", action="store_true",
                         help="Export URL, username and password to pass from passwordstore.org")
-    parser.add_argument("-p", "--pass-prefix", action="store", default=u"firefox_decrypt",
+    parser.add_argument("-p", "--pass-prefix", action="store", default=u"Firefox",
                         help="Prefix for export to pass from passwordstore.org (default: %(default)s)")
     parser.add_argument("-f", "--format", action="store", choices={"csv", "human"},
                         default="human", help="Format for the output.")
